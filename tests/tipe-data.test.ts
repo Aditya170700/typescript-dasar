@@ -1,8 +1,8 @@
 describe('Data TypeScript', () => {
     it('should must declare', () => {
-        const name: string = "Aditya Ricki";
-        const balance: number = 1000000;
-        const isVip: boolean = true;
+        let name: string = "Aditya Ricki";
+        let balance: number = 1000000;
+        let isVip: boolean = true;
 
         console.info(name);
         console.info(balance);
