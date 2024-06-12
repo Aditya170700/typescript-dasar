@@ -55,5 +55,8 @@ describe('function', () => {
         }
 
         expect(sayHello('aditya', toUpper)).toBe('Hello ADITYA');
+        expect(sayHello('ricki', function (name): string {
+            return name.toUpperCase();
+        })).toBe('Hello RICKI');
     });
 });
