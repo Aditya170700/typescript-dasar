@@ -1,4 +1,5 @@
 import {Seller} from "../src/seller";
+import {Manager} from "../src/employee";
 
 describe('seller', () => {
     it('Should be able to sell a seller', () => {
@@ -47,4 +48,15 @@ describe('seller', () => {
 
         console.info(dictionary);
     });
+
+    it('Should support extends interface', () => {
+        const manager: Manager = {
+            id: 1,
+            name: 'John Doe',
+            division: 'IT',
+            numberOfEmployees: 10
+        };
+
+        console.info(manager);
+    })
 });
