@@ -29,4 +29,19 @@ describe('function', () => {
 
         expect(sum(1, 2, 3, 4, 5)).toBe(15);
     });
+
+    it('should support function overloading', () => {
+        function callMe(value: number): number;
+        function callMe(value: string): string;
+        function callMe(value: any): any {
+            if (typeof value === 'number') {
+                return value * 10;
+            } else if (typeof value === 'string') {
+                return value.toUpperCase();
+            }
+        }
+
+        expect(callMe(10)).toBe(100);
+        expect(callMe('aditya')).toBe('ADITYA');
+    })
 });
