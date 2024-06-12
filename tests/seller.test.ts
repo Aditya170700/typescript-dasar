@@ -58,5 +58,23 @@ describe('seller', () => {
         };
 
         console.info(manager);
-    })
+    });
+
+    it('Should support function in interface', () => {
+        interface Person {
+            name: string;
+            sayHello(name: string): string;
+        }
+
+        const aditya: Person = {
+            name: 'Aditya',
+            sayHello: function (name: string): string {
+                return `Hello ${name}, my name is ${this.name}`;
+            }
+        }
+
+        console.info(aditya);
+        console.info(aditya.name);
+        console.info(aditya.sayHello('Erni Safitri'));
+    });
 });
