@@ -4,7 +4,8 @@ describe('Alias', function () {
     it('should be able to have a category', () => {
         const category: Category = {
             id: 1,
-            name: "Handphone"
+            name: "Handphone",
+            description: "-",
         };
 
         const product: Product = {
