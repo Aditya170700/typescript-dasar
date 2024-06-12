@@ -6,6 +6,8 @@ describe('seller', () => {
             id: 1,
             name: 'John Doe',
             description: '-',
+            nib: '912879812',
+            npwp: '928719821'
         };
 
         console.info(seller);
