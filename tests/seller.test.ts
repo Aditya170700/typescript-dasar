@@ -77,4 +77,23 @@ describe('seller', () => {
         console.info(aditya.name);
         console.info(aditya.sayHello('Erni Safitri'));
     });
+
+    it('Should support intersection type', () => {
+        interface HasName {
+            name: string;
+        }
+
+        interface HasId {
+            id: number;
+        }
+
+        type Domain = HasName & HasId;
+
+        const com: Domain = {
+            name: 'aditya',
+            id: 1
+        }
+
+        console.info(com);
+    });
 });
