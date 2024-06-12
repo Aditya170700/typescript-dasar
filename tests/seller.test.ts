@@ -23,5 +23,28 @@ describe('seller', () => {
         }
 
         console.log(add(1, 2));
-    })
+    });
+
+    it('Should support indexable iface', () => {
+        interface StringArray {
+            [index: number]: string;
+        }
+
+        const names: StringArray = ['Aditya', 'John Doe'];
+
+        console.info(names);
+    });
+
+    it('Should support indexable iface for non number index', () => {
+        interface StringDictionary {
+            [key: string]: string;
+        }
+
+        const dictionary: StringDictionary = {
+            "name": "Aditya",
+            "address": "Indonesia"
+        }
+
+        console.info(dictionary);
+    });
 });
