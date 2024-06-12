@@ -1,3 +1,4 @@
-export function sayHello(name: string): String {
-    return `Hello ${name}`;
+export function sayHello(name?: string | null): String {
+    if (name) return `Hello ${name}`;
+    else return 'Hello';
 }
